@@ -1,15 +1,24 @@
-.chats-body {
-  padding: 0;
+.header-wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: white;
 }
 
-.chat-body .header,
-.chat-body .status-bar {
+.chats-body {
+  padding: 10px 0px;
+  padding-top: 100px;
+}
+
+.chats-body .header,
+.chats-body .status-bar {
   padding: 0px 20px;
 }
 
-.chat-screen {
+.chats-body {
   background-image: url("../images/chatBg.png");
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 .chat__write {
@@ -62,8 +71,8 @@
   padding: 5px 10px;
   border-radius: 10px;
   margin-bottom: 30px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
-    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -71,12 +80,7 @@
 .message {
   display: flex;
   align-items: flex-start;
-  width: 50%;
   margin-bottom: 20px;
-}
-
-.message .message__content {
-  width: 80%;
 }
 
 .incoming-message {
@@ -102,6 +106,9 @@
     rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
   padding: 10px 20px;
   border-radius: 20px;
+  display: block;
+  color: white;
+  font-weight: 600;
 }
 
 .incoming-message .message__author {
@@ -113,8 +120,10 @@
 
 .incoming-message .message__bubble {
   border-bottom-left-radius: 0px;
+  background-image: linear-gradient(to right, #7b4397, #dc2430);
 }
 
 .sent-message .message__bubble {
   border-bottom-right-radius: 0px;
+  background-image: linear-gradient(to left, #00c6ff, #0072ff);
 }
